@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
+#find the modulus of the number divided by 10... to findthe last digit
 la_digit = abs(number) % 10
 if number < 0:
     la_digit = -la_digit
