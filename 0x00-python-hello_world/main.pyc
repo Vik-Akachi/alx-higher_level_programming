@@ -1,0 +1,3 @@
+"Best School"
+1
+print(F'{str1}')
