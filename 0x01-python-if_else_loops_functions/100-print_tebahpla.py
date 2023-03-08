@@ -6,5 +6,5 @@ def rev(chr1):
             i -= 1
             if ord(j) == ord(i + 32):
                 j -= 2
-            print(f'{i}, {j}', end="")
+            print('{}, {:<1}' .format(i, j), end="")
 # rev(chr1)
