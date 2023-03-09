@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+# module for simple calculation, supporting addition,
+# subtraction, multiplication and division.
+
 from calculator_1 import(add, sub, mul, div)
 
 a = 10
