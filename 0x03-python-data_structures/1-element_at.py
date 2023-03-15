@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
 def element_at(my_list, idx):
-    i = 0
-    while i >= 1:
+    while idx < len(my_list):
         if idx < 0:
             return (none)
-        elif idx > i:
+        elif idx > len(my_list):
             return (none)
         else:
-            return (i)
+            return (idx + 1)
