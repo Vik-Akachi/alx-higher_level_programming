@@ -7,5 +7,5 @@ def safe_print_integer(value):
 #        while int(value):
         return (True)
 
-    except ValueError:
+    except (TypeError, ValueError):
         return (False)
