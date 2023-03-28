@@ -2,6 +2,7 @@
 
 import sys
 
+
 def safe_print_integer_err(value):
     """prints integers with "{:d}" .format().
 
@@ -12,9 +13,9 @@ def safe_print_integer_err(value):
     """
 
     try:
-                print("{:d}".format(value))
+        print("{:d}".format(value))
 
-                return (True)
+        return (True)
 
     except (ValueError, TypeError):
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
