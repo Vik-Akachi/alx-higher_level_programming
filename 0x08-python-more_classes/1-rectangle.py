@@ -19,21 +19,21 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """Initialising Rectangle"""
         self.width = width
         self.height = height
 
-    """Giving main Attributes to the class: Rectangle"""
     @property
     def width(self):
         """ The getter will return Rectangle width"""
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
         """The setter sets with to always be > 0"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif self.__width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -47,6 +47,6 @@ class Rectangle:
         """Setter makes sure that height is always > o"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif self.__height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
