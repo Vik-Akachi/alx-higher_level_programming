@@ -8,7 +8,7 @@
 class Rectangle:
     """
     Defines the class Rectangle with private attributes width and height
-    
+
     Args:
         width (int): width
         height (int): height
@@ -25,7 +25,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initialises a Rectangle"""
         self.width = width
-        self.height =height
+        self.height = height
 
     @property
     def width(self):
@@ -64,4 +64,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.__height)
-
