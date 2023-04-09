@@ -1,4 +1,4 @@
-#!/usr/bin/pytho
+#!/usr/bin/python3
 """
     Module 3-rectangle:
     module defines a rectangle with private attributes width and height
@@ -84,6 +84,7 @@ class Rectangle:
             """
             This Returns the string representation of the Rectangle
             """
-            rectangle = "Rectangle(" + str(self.__width)
-            rectangle += ", " + str(self.__height) + ")"
-            return (rectangle)
+
+        def __del__(self):
+            """ This action deletes the rectangle"""
+            print("Bye rectangle...")
