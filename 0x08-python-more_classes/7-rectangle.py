@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""                                                                                                                                              Module 3-rectangle:
+"""
+    Module 3-rectangle:
     module defines a rectangle with private attributes width and height
     public methods area and perimeter.
 """
@@ -27,9 +28,9 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        type(self).number_of_instances += 1
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -75,23 +76,16 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
+        return((str(self.print_symbol) * self.__width + "\n") * self.__height)[: -1]
 
-        rectangle = []
-        for a in range(self.__height):
-            [rectangle.append('#') for b in range(self.__width)]
-            if a != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
 
     def __repr__(self):
         """
         This Returns the string representation of the Rectangle
         """
-        rectangle = "Rectangle(" + str(self.__width)
-        rectangle += ", " + str(self.__height) + ")"
-        return (rectangle)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """ This action deletes the rectangle"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
