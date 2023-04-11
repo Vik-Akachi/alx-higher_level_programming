@@ -80,11 +80,14 @@ class Rectangle:
                 rectangle.append("\n")
         return ("".join(rectangle))
 
-        def __repr__(self):
-            """
-            This Returns the string representation of the Rectangle
-            """
+    def __repr__(self):
+        """
+        This Returns the string representation of the Rectangle
+        """
+        rectangle = "Rectangle(" + str(self.__width)
+        rectangle += ", " + str(self.__height) + ")"
+        return (rectangle)
 
-        def __del__(self):
-            """ This action deletes the rectangle"""
-            print("Bye rectangle...")
+    def __del__(self):
+        """ This action deletes the rectangle"""
+        print("Bye rectangle...")
