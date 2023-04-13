@@ -7,4 +7,4 @@ import json
 
 def to_json_string(my_obj):
     """This code returns a sereilaized object(string)"""
-    json.dumps(my_obj)
+    return json.dumps(my_obj)
