@@ -1,0 +1,113 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+
+'''ad_integer(...)''' this returns the result of adding to integers,
+the operator used for the addition function is the '''+''' unary operator.
+
+::
+	>>> add_interger = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+::
+
+	>>> add_integer(2, -3)
+	-1
+
+this function can also be applied in floating point values.
+
+::
+	>>> add_integer(2.0, 3.0)
+	5
+Note that floats are cast to integers before they are operated on by  '''+'''
+
+::
+	>>> add_integer(2.9, 0.2)
+	2
+
+::
+	>>> add_integer(-2.9, -0.2)
+	-2
+
+floating and none floating point values can be combined.
+
+::
+	>>>add_intiger(2.3, -3)
+	-1
+
+The second argument is optional: the given integer by default is 98.
+
+::
+	>>> add_integer(2)
+	100
+
+Non-numbers
+===============
+
+"""add_integer()""" expects that both arguments are either integers or floats.
+the program raises a TypeError if none of the points is integer or float.
+
+::
+
+	>>>add_integer("hello", 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>>add_integer(2, "hello")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+::
+
+	>>>add_integer(None)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+::
+
+	>>>add_integer(2.3, None)
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+if both arguments are none integers and none floats, a TypeError message
+will be raised just for the first affected argument.
+
+::
+
+	>>>add_integer("hello", "there")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+if for instance infinity argument is provided, the program will fail.
+
+::
+
+	>>>add_integer(float('inf'))
+        Traceback (most recent call last):
+        TypeError: cannot convert float infinity to integer
+
+::
+
+	>>>add_integer(2, float('inf'))
+        Traceback (most recent call last):
+        TypeError: cannot convert float infinity to integer
+
+if NaN numbers are inputed
+
+::
+
+	>>>add_integer(float('nan'))
+        Traceback (most recent call last):
+        TypeError: cannot convert float NaN to integer
+
+::
+
+	>>>add_integer(2, float('inf'))
+        Traceback (most recent call last):
+        TypeError: cannot convert float NaN to integer
+
